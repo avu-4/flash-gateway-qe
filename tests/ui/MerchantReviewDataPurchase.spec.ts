@@ -26,14 +26,27 @@ test('Sign in to PrimeFin successfully', async ({ page }) => {
     await page.getByRole('textbox', {name : '00 000 0000'}).fill('0618032306');
     await page.getByRole('button', {name : 'Airtime'}).click();
     await page.getByRole('button', {name : 'R 20', exact:true}).click();
-
-
-    await expect(
-    page.locator('p.font-headline-md.text-headline-md.text-primary')).toHaveText('R 20,00'); //Assertion/Verify Amount
     await page.getByRole('button', {name: 'Review Payment arrow_forward'}).click();
+    console.log(
+    await page.getByText('Airtime top-up', { exact: true }).evaluate(
+        element => element.parentElement?.parentElement?.outerHTML
+    ));
+
+   // Assertions
+
     await expect(
     page.getByText('Airtime top-up', { exact: true })
     ).toBeVisible();
-    await expect(page.getByText('Confirm Payment')).toBeVisible();
-    await page.getByRole('button', {name : 'Confirm Payment'}).click();
-})
+
+    await expect(
+    page.locator('p').filter({ hasText: /^Vodacom$/ })
+    ).toBeVisible();
+
+    await expect(
+    page.locator('p.font-headline-md.text-headline-md.text-primary')
+    ).toHaveText('R 20,00');
+
+    await expect(
+    page.getByText('+27 618030987', { exact: true })
+    ).toBeVisible();
+});

@@ -24,15 +24,15 @@ test('Sign in to PrimeFin successfully', async ({ page }) => {
     await expect(page).toHaveURL('http://localhost:4173/airtime');
     await page.getByRole('button', {name: 'check_circle V Vodacom'}).click();
     await page.getByRole('textbox', {name : '00 000 0000'}).fill('0618032306');
-    await page.getByRole('button', {name : 'Airtime'}).click();
-    await page.getByRole('button', {name : 'R 20', exact:true}).click();
+    await page.getByRole('button', {name : 'Data Bundles'}).click();
+    await page.getByRole('button', {name : 'R 50', exact:true}).click();
 
 
     await expect(
-    page.locator('p.font-headline-md.text-headline-md.text-primary')).toHaveText('R 20,00'); //Assertion/Verify Amount
+    page.locator('p.font-headline-md.text-headline-md.text-primary')).toHaveText('R 50,00'); //Assertion/Verify Amount
     await page.getByRole('button', {name: 'Review Payment arrow_forward'}).click();
     await expect(
-    page.getByText('Airtime top-up', { exact: true })
+    page.getByText('Data bundle', { exact: true })
     ).toBeVisible();
     await expect(page.getByText('Confirm Payment')).toBeVisible();
     await page.getByRole('button', {name : 'Confirm Payment'}).click();
