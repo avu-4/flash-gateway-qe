@@ -6,9 +6,10 @@ test('FlashGateway', async ({ page }) => {
 
  // Expect a title "to contain" a substring.
  await expect(page).toHaveURL('http://localhost:4173/login')
-  await page.getByRole('textbox', { name: 'Email address' }).fill('merchant@flashgateway.local');
+  await page.getByRole('textbox', { name: 'Email address' }).fill('minniemeeee13@gmail.com');
   await page.getByRole('textbox', { name: 'Password' }).fill('Password123!');
  await page.getByRole('button', { name: 'Sign In' }).click();
-await expect(page.getByRole('heading', { name: 'Portfolio Overview' })).toBeVisible({timeout: 30000});
+await expect(page.getByRole('heading', { name: 'Access your account' })).toBeVisible({timeout: 30000});
 });
 
+/*importing a object consiisting of test function and expect funtion from the module or component called @playwright/test. */
