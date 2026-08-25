@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('Sign in to PrimeFin successfully', async ({ page }) => {
+     test.setTimeout(180000);
     //Visit page
     await page.goto('http://localhost:4173/login');
     await expect(page).toHaveTitle('FlashGuard | Secure Fintech Portal');
@@ -19,10 +20,10 @@ test('Sign in to PrimeFin successfully', async ({ page }) => {
     await expect(page.getByText('Portfolio Overview'))
         .toBeVisible();
 
-    //Buy airtime
+    //Buy Bundle
     await page.getByRole('link', {name : 'wifi_tethering Airtime & Data'}).click();
     await expect(page).toHaveURL('http://localhost:4173/airtime');
-    await page.getByRole('button', {name: 'check_circle V Vodacom'}).click();
+    await page.getByRole('button', {name: 'M MTN'}).click();
     await page.getByRole('textbox', {name : '00 000 0000'}).fill('0618032306');
     await page.getByRole('button', {name : 'Data Bundles'}).click();
     await page.getByRole('button', {name : 'R 50', exact:true}).click();
@@ -36,4 +37,5 @@ test('Sign in to PrimeFin successfully', async ({ page }) => {
     ).toBeVisible();
     await expect(page.getByText('Confirm Payment')).toBeVisible();
     await page.getByRole('button', {name : 'Confirm Payment'}).click();
+    await expect(page.getByText('Data bundle for MTN was submitted successfully.')).toBeVisible({timeout:150000});
 })

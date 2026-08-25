@@ -5,10 +5,10 @@ test('FlashGateway', async ({ page }) => {
     await page.getByRole('link', { name: 'Sign In' }).first().click();
 
  // Expect a title "to contain" a substring.
- await expect(page).toHaveURL('http://localhost:4173/login')
+  await expect(page).toHaveURL('http://localhost:4173/login')
   await page.getByRole('textbox', { name: 'Email address' }).fill('merchant@flashgateway.local');
   await page.getByRole('textbox', { name: 'Password' }).fill('Yasminatesting!');
- await page.getByRole('button', { name: 'Sign In' }).click();
-await expect(page.getByRole('heading', { name: 'Access your account' })).toBeVisible({timeout: 30000});
+  await page.getByRole('button', { name: 'Sign In' }).click();
+  await expect(page.getByText('Invalid credentials').nth(1)).toBeVisible({timeout: 30000});
 });
 
