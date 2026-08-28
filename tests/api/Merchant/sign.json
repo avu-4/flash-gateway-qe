@@ -1,0 +1,21 @@
+[
+    {
+        "type": "Request",
+        "email": "merchant@flashgateway.local",
+        "password": "Password123!"
+    },
+
+{   
+    "type" : "Response",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJtZXJjaGFudCIsImVtYWlsIjoibWVyY2hhbnRAZmxhc2hnYXRld2F5LmxvY2FsIiwiaWF0IjoxNzg3OTIyNjQ5LCJleHAiOjE3ODc5NTE0NDl9.Nfux0Lgn0crJWFYA2k-Zr4hxy2CJI-JGfjNCkedAiSI",
+    "user": {
+        "id": 1,
+        "merchantId": 1,
+        "email": "merchant@flashgateway.local",
+        "role": "merchant",
+        "name": "Ava Finance",
+        "full_name": "Ava Finance",
+        "status" : "200, Ok"
+    }
+}
+]

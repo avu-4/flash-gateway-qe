@@ -1,0 +1,7 @@
+{   
+    "type" : "Response",
+    "status": "200 OK",
+    "metrics": {
+        "merchantCount": 3
+    }
+}

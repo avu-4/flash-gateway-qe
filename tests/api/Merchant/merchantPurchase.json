@@ -1,0 +1,18 @@
+[{
+    "type": "Request",
+    "amount": 100,
+    "product": "Airtime",
+    "productId": 1
+},
+
+{   
+    "type": "Response",
+    "success": true,
+    "commission": "10.00",
+    "settlementAmount": "90.00",
+    "status": "200 OK"
+}
+
+
+
+]

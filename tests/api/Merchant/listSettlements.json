@@ -1,0 +1,75 @@
+{
+    "items": [
+        {   
+            "type" : "Response",
+            "id": 26,
+            "merchantId": 1,
+            "amount": 90,
+            "description": "Settlement for sms top-up to 0618032306",
+            "createdAt": "2026-08-28T09:32:23.594Z"
+        },
+        {
+            "id": 25,
+            "merchantId": 1,
+            "amount": 45,
+            "description": "Settlement for data top-up to 0618032306",
+            "createdAt": "2026-08-28T09:32:23.593Z"
+        },
+        {
+            "id": 24,
+            "merchantId": 1,
+            "amount": 90,
+            "description": "Settlement for sms top-up to 0618032306",
+            "createdAt": "2026-08-28T09:31:50.422Z"
+        },
+        {
+            "id": 23,
+            "merchantId": 1,
+            "amount": 18,
+            "description": "Settlement for airtime top-up to 0618032306",
+            "createdAt": "2026-08-28T09:31:50.413Z"
+        },
+        {
+            "id": 22,
+            "merchantId": 1,
+            "amount": 45,
+            "description": "Settlement for data top-up to 0618032306",
+            "createdAt": "2026-08-28T09:31:16.874Z"
+        },
+        {
+            "id": 21,
+            "merchantId": 1,
+            "amount": 90,
+            "description": "Settlement for airtime top-up to 0618032306",
+            "createdAt": "2026-08-28T09:31:16.868Z"
+        },
+        {
+            "id": 20,
+            "merchantId": 1,
+            "amount": 90,
+            "description": "Settlement for sms top-up to 0618032306",
+            "createdAt": "2026-08-28T09:30:46.711Z"
+        },
+        {
+            "id": 19,
+            "merchantId": 1,
+            "amount": 45,
+            "description": "Settlement for data top-up to 0618032306",
+            "createdAt": "2026-08-28T09:30:46.709Z"
+        },
+        {
+            "id": 18,
+            "merchantId": 1,
+            "amount": 180,
+            "description": "Settlement for airtime top-up to 0618032306",
+            "createdAt": "2026-08-28T09:30:13.429Z"
+        },
+        {
+            "id": 17,
+            "merchantId": 1,
+            "amount": 90,
+            "description": "Settlement for sms top-up to 0618032306",
+            "createdAt": "2026-08-28T09:30:13.422Z"
+        }
+    ]
+}

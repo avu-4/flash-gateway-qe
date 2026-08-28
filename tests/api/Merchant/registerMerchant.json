@@ -1,0 +1,19 @@
+[{  
+    "type": "Request",
+    "email": "newmerchant@example.com",
+    "fullName": "New Merchant",
+    "msisdn": "+27821234567",
+    "password": "Password123!"
+    
+},
+
+{   
+    "type" : "Response",
+    "message": "Registration successful",
+    "user": {
+        "id": 3,
+        "email": "newmerchant@example.com",
+        "msisdn": "+27821234567",
+        "status" : "201, Created"
+    }
+}]
