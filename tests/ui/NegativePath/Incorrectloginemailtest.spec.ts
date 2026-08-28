@@ -10,6 +10,7 @@ test('FlashGateway', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Password' }).fill('Password123!');
   await page.getByRole('button', { name: 'Sign In' }).click();
   await expect(page.getByText('Invalid credentials').nth(1)).toBeVisible({timeout: 30000});
+  await expect(page).toHaveURL('http://localhost:4173/login');
 });
 
 /*importing a object consiisting of test function and expect funtion from the module or component called @playwright/test. */
