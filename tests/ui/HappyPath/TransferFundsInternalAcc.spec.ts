@@ -24,5 +24,7 @@ test('Sign in to PrimeFin successfully', async ({ page }) => {
     await expect(page.getByText('Transfer Details')).toBeVisible();
     await page.getByRole('button', {name: 'Internal account Use a linked account'}).click();
     await page.getByRole('spinbutton', {name : '0.00'}).fill('200.00');
+    await page.getByRole('button', {name: 'lock Confirm & Transfer'}).click();
+    await expect(page.getByText('successfully!')).toBeVisible({timeout:100000})
 
 });
