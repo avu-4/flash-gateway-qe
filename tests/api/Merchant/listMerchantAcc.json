@@ -1,0 +1,10 @@
+[
+    {   "type": "Response",
+        "id": 1,
+        "full_name": "Ava Finance",
+        "email": "merchant@flashgateway.local",
+        "balance": 2160,
+        "status": "active",
+        "Response status": "200 OK"
+    }
+]

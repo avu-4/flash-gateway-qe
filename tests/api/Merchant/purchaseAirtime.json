@@ -1,0 +1,27 @@
+[{
+    "type": "Request",
+    "senderAccountId": 1,
+    "serviceType": "airtime",
+    "network": "Vodacom",
+    "phoneNumber": "+27821234567",
+    "amount": 100
+},
+
+{   
+    "type": "Response",
+    "success": true,
+    "transaction": {
+        "id": 32,
+        "merchantId": 1,
+        "amount": 100,
+        "transactionType": "service_purchase",
+        "service_type": "airtime",
+        "status": "completed",
+        "createdAt": "2026-08-28T15:17:58.814Z",
+        "Response status": "200 OK"
+    }
+}
+
+
+
+]

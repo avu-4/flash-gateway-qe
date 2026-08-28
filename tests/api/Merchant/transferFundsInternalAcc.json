@@ -1,0 +1,24 @@
+[{ 
+    "tyep": "Request",
+    "senderAccountId": 1,
+    "recipientAccountId": 2,
+    "amount": 250,
+    "reference": "Internal settlement"
+},
+
+{   
+    "type": "Response",
+    "id": 33,
+    "merchantId": 1,
+    "amount": 250,
+    "transactionType": "transfer",
+    "status": "completed",
+    "reference": "Internal settlement",
+    "recipientName": "Northstar Pay",
+    "recipientAccountNumber": "ACC-2",
+    "recipientBank": null,
+    "createdAt": "2026-08-28T15:22:43.452Z",
+    "Response status": "200 OK"
+}
+
+]

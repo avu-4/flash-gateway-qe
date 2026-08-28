@@ -13,4 +13,3 @@ test('FlashGateway', async ({ page }) => {
   await expect(page).toHaveURL('http://localhost:4173/login');
 });
 
-/*importing a object consiisting of test function and expect funtion from the module or component called @playwright/test. */
