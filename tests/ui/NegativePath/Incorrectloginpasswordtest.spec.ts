@@ -10,5 +10,6 @@ test('FlashGateway', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Password' }).fill('Yasminatesting!');
   await page.getByRole('button', { name: 'Sign In' }).click();
   await expect(page.getByText('Invalid credentials').nth(1)).toBeVisible({timeout: 30000});
+  await expect(page).toHaveURL('http://localhost:4173/login');
 });
 
