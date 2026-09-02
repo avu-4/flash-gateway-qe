@@ -1,0 +1,23 @@
+[
+    
+    {   
+        "type": "Request",
+        "cardNumber": "4111111111111111",
+        "nickname": "Primary Visa",
+        "expiryDate": "12/26",
+        "cvv": "123"
+    },
+
+    {   
+
+        "id": 3,
+        "merchantId": 1,
+        "nickname": "Primary Visa",
+        "cardNumber": "**** 1111",
+        "expiryDate": "12/26",
+        "status": "Active",
+        "Response status": "200 OK"
+    }
+
+
+]

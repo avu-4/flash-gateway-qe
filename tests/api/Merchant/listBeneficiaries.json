@@ -1,0 +1,23 @@
+[   
+    {
+        "type" : "Response",
+        "status": "200 OK"
+
+    },
+    {
+        "id": 1,
+        "beneficiary_name": "Acme Supplies",
+        "bank": "Standard Bank",
+        "account_number": "1234567890",
+        "reference": "Office expenses",
+        "created_at": "2026-07-17T00:00:00Z"
+    },
+    {
+        "id": 2,
+        "beneficiary_name": "Travel Co",
+        "bank": "FNB",
+        "account_number": "0987654321",
+        "reference": "Corporate travel",
+        "created_at": "2026-07-17T00:00:00Z"
+    }
+]

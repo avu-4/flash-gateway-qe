@@ -1,0 +1,14 @@
+[
+    {   
+        "type": "Request",
+        "email": "JohnDoe@example.com",
+        "fullName": "John Doe",
+        "password": "Password123!"
+    },
+
+    {   
+        "type": "Response",
+        "message": "Email or MSISDN already registered",
+        "status": "409 Conflict"
+    }
+]

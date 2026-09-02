@@ -1,0 +1,13 @@
+[
+    {   
+        "type": "Request",
+        "email": "merchant@flashgateway.local",
+        "password": "Password120!"
+    },
+
+    {   
+        "type": "Response",
+        "message": "Invalid credentials",
+        "status": "401 Unauthorized"
+    }
+]

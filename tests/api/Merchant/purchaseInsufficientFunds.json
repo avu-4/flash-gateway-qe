@@ -1,0 +1,17 @@
+[
+    
+    {   
+        "type": "Request",
+        "amount": 100,
+        "product": "Airtime",
+        "productId": 1
+    },
+
+    {   
+        "type": "Response",
+        "message": "Insufficient balance",
+        "status": "400 Bad Request"
+    }
+
+
+]

@@ -1,0 +1,12 @@
+{   
+    "type": "Response",
+    "Response status": "200 OK",
+    "id": 3,
+    "merchantName": "John Doe",
+    "email": "johndoe@gmail.com",
+    "msisdn": "+27821234567",
+    "passwordHash": "$2a$10$CX5G9aLk2RJhaKeXbEv6fOjsUHlIj.8DAjW.wtuDdVgBp0mcFFwMi",
+    "role": "merchant",
+    "walletBalance": 500,
+    "status": "active"
+}
