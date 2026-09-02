@@ -1,0 +1,23 @@
+[
+    {
+        "type": "Response",
+        "status": "200 OK"
+    },
+    
+    {
+        "id": 1,
+        "merchantId": 1,
+        "nickname": "Primary Visa",
+        "cardNumber": "**** 1234",
+        "expiryDate": "12/26",
+        "status": "Active"
+    },
+    {
+        "id": 2,
+        "merchantId": 1,
+        "nickname": "Backup Mastercard",
+        "cardNumber": "**** 9876",
+        "expiryDate": "05/27",
+        "status": "Active"
+    }
+]

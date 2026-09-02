@@ -1,0 +1,5 @@
+{   
+    "tyep": "Response",
+    "message": "Merchant not found",
+    "status": "404 Not Found"
+}

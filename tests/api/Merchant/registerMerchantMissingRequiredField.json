@@ -1,0 +1,14 @@
+[
+    {   
+        "type": "Request",
+        "email": "newmerchant@example.com",
+        "fullName": "New Merchant",
+        "msisdn": "+27821234567"
+    },
+
+    {   
+        "type": "Response",
+        "message": "Email, full name and password are required",
+        "status": "400 Bad Request"
+    }
+]
