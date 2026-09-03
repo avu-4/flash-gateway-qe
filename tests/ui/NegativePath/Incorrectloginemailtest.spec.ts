@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('FlashGateway', async ({ page }) => {
+test('Verify login using incorrect email.', async ({ page }) => {
   await page.goto('http://localhost:4173');
   await page.getByRole('link', { name: 'Sign In' }).first().click();
 

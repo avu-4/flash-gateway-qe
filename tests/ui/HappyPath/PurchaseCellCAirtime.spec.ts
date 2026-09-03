@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('Sign in to PrimeFin successfully', async ({ page }) => {
+test('Purchase Cell C Airtime successfully.', async ({ page }) => {
     // Allow the entire test up to 3 minutes
     test.setTimeout(180000);
 

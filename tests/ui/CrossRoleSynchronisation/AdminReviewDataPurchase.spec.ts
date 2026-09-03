@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('Sign in to PrimeFin successfully', async ({ page }) => {
+test('Review Bundle Purchase.', async ({ page }) => {
 
     // Visit page
     await page.goto('http://localhost:4173/login');

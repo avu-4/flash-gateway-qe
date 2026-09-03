@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('Sign in to PrimeFin successfully', async ({ page }) => {
+test('Purchase Vodacom SMS successfully.', async ({ page }) => {
     test.setTimeout(180000);
     //Visit page
     await page.goto('http://localhost:4173/login');
