@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test';
  
-test('Transfer amount slightly above available balance', async ({page}) => {
+test('Enter special characters onto form injection', async ({page}) => {
     test.setTimeout(150000);
  
     await page.goto('http://localhost/login');
@@ -29,14 +29,20 @@ test('Transfer amount slightly above available balance', async ({page}) => {
         .click();
  
     //Fill Beneficiary details
-    await page.getByRole('textbox', {name: 'Beneficiary Name'}).fill('Uber');
-    await page.getByRole('textbox', {name: 'Bank'}).fill('ABSA BANK');
-    await page.getByRole('textbox', {name: 'Account Number'}).fill('1234567890');
-    await page.getByRole('spinbutton', {name: '0.00'}).fill('5000.01');
+    await page.getByRole('textbox', {name: 'Beneficiary Name'}).fill('@#$%^&*!');
+    await page.getByRole('textbox', {name: 'Bank'}).fill('*&^%$#@!');
+    await page.getByRole('textbox', {name: 'Account Number'}).fill('*&^%$#@!');
+    await page.getByRole('spinbutton', {name: '0.00'}).fill('1');
  
     //Assertion
-    await page.getByRole('button', {name: 'lock Confirm & Transfer'}).click();
-    await expect(page.getByText('Insufficient balance')).toBeVisible({timeout:100000})
+    await page.getByRole('button', {
+        name: 'lock Confirm & Transfer'
+    }).click();
+
+    await expect( page.getByText(/Transfer #\d+ created successfully!/) ).toBeVisible();
+
+
+
+
 });
- 
  

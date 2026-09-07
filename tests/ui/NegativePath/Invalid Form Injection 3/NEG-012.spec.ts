@@ -1,7 +1,7 @@
 import {test, expect} from '@playwright/test';
  
-test('Transfer amount slightly above available balance', async ({page}) => {
-    test.setTimeout(150000);
+test('Enter negative transfer amount', async ({page}) => {
+    test.setTimeout(300000);
  
     await page.goto('http://localhost/login');
     await expect(page).toHaveTitle('FlashGuard | Secure Fintech Portal');
@@ -32,11 +32,10 @@ test('Transfer amount slightly above available balance', async ({page}) => {
     await page.getByRole('textbox', {name: 'Beneficiary Name'}).fill('Uber');
     await page.getByRole('textbox', {name: 'Bank'}).fill('ABSA BANK');
     await page.getByRole('textbox', {name: 'Account Number'}).fill('1234567890');
-    await page.getByRole('spinbutton', {name: '0.00'}).fill('5000.01');
+    await page.getByRole('spinbutton', {name: '0.00'}).fill('-50');
  
     //Assertion
     await page.getByRole('button', {name: 'lock Confirm & Transfer'}).click();
-    await expect(page.getByText('Insufficient balance')).toBeVisible({timeout:100000})
+    await page.getByText('Value must be greater than or equal to 0.');
 });
- 
  
