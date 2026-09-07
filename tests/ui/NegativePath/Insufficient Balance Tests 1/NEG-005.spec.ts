@@ -36,5 +36,5 @@ test('Zero/near-zero balance transfer attempt', async ({page}) => {
  
     //Assertion
     await page.getByRole('button', {name: 'lock Confirm & Transfer'}).click();
-    await expect(page.getByText('Insufficient balance')).toBeVisible();
+    await expect(page.getByText('Enter a valid transfer amount')).toBeVisible();
 });
