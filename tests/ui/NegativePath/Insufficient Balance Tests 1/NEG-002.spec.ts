@@ -9,7 +9,7 @@ test('Transfer amount equal to balance', async ({page}) => {
     //Login
     await page.getByRole('textbox', { name: 'Email address' })
         .fill('merchant@flashgateway.local');
- 
+
     await page.getByRole('textbox', { name: 'Password' })
         .fill('Password123!');
  
