@@ -11,11 +11,11 @@ test('Transfer amount greater than available balance', async ({page}) => {
         .fill('merchant@flashgateway.local');
  
     await page.getByRole('textbox', { name: 'Password' })
-        .fill('Password123!');
+        .fill('Password123!'); 
  
     await page.getByRole('button', { name: 'Sign In' })
         .click();
- 
+
     await page.waitForTimeout(15000);
     await expect(page).toHaveURL('http://localhost/dashboard'); 
     await expect(page.getByText('Portfolio Overview'))
