@@ -1,0 +1,121 @@
+import { test, expect } from '@playwright/test';
+ 
+test('Attempt transfer from an expired session', async ({ page }) => {
+  await page.goto('http://localhost/');
+    await page.getByRole('link', { name: 'Sign In' }).first().click();
+ 
+ // Expect a title "to contain" a substring.
+    await expect(page).toHaveURL('http://localhost/login')
+    await page.getByRole('textbox', { name: 'Email address' }).fill('merchant@flashgateway.local');
+    await page.getByRole('textbox', { name: 'Password' }).fill('Password123!');
+    await page.getByRole('button', { name: 'Sign In' }).click();
+   
+    await expect(page).toHaveURL('http://localhost/dashboard');
+    await expect(page.getByText('Portfolio Overview')).toBeVisible({timeout: 30000});
+ 
+ 
+ 
+ // Navigate to Transfer Funds page
+    await page.goto('http://localhost/transfers', {
+      waitUntil: 'domcontentloaded'
+    });
+   
+ 
+ //Click the "Transfer Funds link"
+    await page.getByRole('link', {name: 'Transfer Funds'}).click();
+   
+ 
+ //Navigate to Saved Beneficiary
+    await page.getByRole('button', { name: 'ONE-OFF BENEFICIARY' }).click();
+
+
+ //Add beneficiary details
+    await page.getByPlaceholder('e.g. Acme Supplies').fill('Asemahle');
+    await page.getByPlaceholder('e.g. Standard Bank').fill('FNB');
+    await page.getByPlaceholder('e.g. 1234567890').fill('0987654321');
+
+
+ //Making a Transfer  
+   await page.getByPlaceholder('0.00').fill('5');
+   await page.getByPlaceholder('e.g. Invoice INV-2024-001').fill('Invoice INV-2026-001');
+   
+   
+ // SIMULATE EXPIRED SESSION
+   
+   await page.route( 
+      'http://localhost:4000/transactions/transfer', 
+      async route => {
+         
+         console.log('Simulating expired session...');
+   
+         await route.fulfill({ 
+            status: 401, 
+            contentType: 'application/json', 
+            body: JSON.stringify({ 
+               message: 'Session expired'
+            }) 
+         }); 
+      } 
+   );
+
+
+   
+ // WAIT FOR THE ACTUAL TRANSFER API RESPONSE
+
+   const transferResponse = page.waitForResponse( 
+      response =>
+         response.url() ===
+            'http://localhost:4000/transactions/transfer' && 
+      response.request().method() === 'POST' 
+   );
+
+
+
+ // ATTEMPT TRANSFER
+
+   await expect( 
+      page.getByRole('button', { 
+         name: 'Confirm & Transfer' 
+      }) 
+   ).toBeVisible();
+
+   await page.getByRole('button', { 
+      name: 'Confirm & Transfer' 
+   }).click();
+
+
+
+ // VERIFY TRANSFER WAS REJECTED
+  const response = await transferResponse; 
+  
+  expect(response.status()).toBe(401);
+ 
+ // Verify user remains on the transfer page
+
+   await expect(page).toHaveURL( 
+      'http://localhost/transfers' 
+   );
+
+
+
+});
+    
+
+
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
