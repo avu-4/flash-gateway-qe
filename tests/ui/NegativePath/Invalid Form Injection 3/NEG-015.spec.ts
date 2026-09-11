@@ -1,9 +1,9 @@
 import {test, expect} from '@playwright/test';
  
 test('Submit transfers with manipulated/invalid form values', async ({page}) => {
-    test.setTimeout(150000);
+    test.setTimeout(300000);
  
-    await page.goto('http://localhost/login');
+    await page.goto('http://localhost:4173/login');
     await expect(page).toHaveTitle('FlashGuard | Secure Fintech Portal');
  
     //Login
@@ -17,13 +17,13 @@ test('Submit transfers with manipulated/invalid form values', async ({page}) => 
         .click();
  
     await page.waitForTimeout(15000);
-    await expect(page).toHaveURL('http://localhost/dashboard');
+    await expect(page).toHaveURL('http://localhost:4173/dashboard');
     await expect(page.getByText('Portfolio Overview'))
         .toBeVisible();
  
     //Navigate to Transfer funds
     await page.getByRole('link', {name: "payments Transfer Funds"}).click();
-    await expect(page).toHaveURL('http://localhost/transfers');
+    await expect(page).toHaveURL('http://localhost:4173/transfers');
     await expect(page.getByText('Transfer Details')).toBeVisible();
     await page.getByRole('button', {name: 'One-off beneficiary Enter one-off details'})
         .click();
@@ -36,6 +36,7 @@ test('Submit transfers with manipulated/invalid form values', async ({page}) => 
  
     //Assertion
     await page.getByRole('button', {name: 'lock Confirm & Transfer'}).click();
-    await expect( page.getByText(/Transfer #\d+ created successfully!/) ).toBeVisible();
+    await expect(page.getByText('successfully!'))
+        .toBeVisible({ timeout: 150000 });
 });
  

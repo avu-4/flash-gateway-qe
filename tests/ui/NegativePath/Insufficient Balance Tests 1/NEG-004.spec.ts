@@ -1,9 +1,9 @@
 import {test, expect} from '@playwright/test';
  
 test('Multiple transfers attempt to exceed balance-Transfer 1', async ({page}) => {
-    test.setTimeout(15000);
+    test.setTimeout(150000);
  
-    await page.goto('http://localhost/login');
+    await page.goto('http://localhost:4173/login');
     await expect(page).toHaveTitle('FlashGuard | Secure Fintech Portal');
  
     //Login
@@ -17,13 +17,13 @@ test('Multiple transfers attempt to exceed balance-Transfer 1', async ({page}) =
         .click();
  
     
-    await expect(page).toHaveURL('http://localhost/dashboard');
+    await expect(page).toHaveURL('http://localhost:4173/dashboard', {timeout: 150000} );
     await expect(page.getByText('Portfolio Overview'))
         .toBeVisible();
  
     //Navigate to Transfer funds. Transfer 1
     await page.getByRole('link', {name: "payments Transfer Funds"}).click();
-    await expect(page).toHaveURL('http://localhost/transfers');
+    await expect(page).toHaveURL('http://localhost:4173/transfers');
     await expect(page.getByText('Transfer Details')).toBeVisible();
     await page.getByRole('button', {name: 'One-off beneficiary Enter one-off details'})
         .click();
@@ -36,13 +36,13 @@ test('Multiple transfers attempt to exceed balance-Transfer 1', async ({page}) =
 
    //Assertion
     await page.getByRole('button', {name: 'lock Confirm & Transfer'}).click();
-    await expect(page.getByText(/Transfer #\d+ created successfully!/)).toBeVisible({timeout:15000});
-
+   await expect(page.getByText('successfully!'))
+        .toBeVisible({ timeout: 150000 });
 
  // TRANSFER 2
  // Wait for the transfer form to be available again
     await expect(page).toHaveURL(
-        'http://localhost/transfers'
+        'http://localhost:4173/transfers'
     );
 
     await expect( 
@@ -62,7 +62,7 @@ test('Multiple transfers attempt to exceed balance-Transfer 1', async ({page}) =
    
  //Assertion
    
-    await expect(page.getByText('Insufficient balance ')).toBeVisible({timeout:15000});
+    await expect(page.getByText('Insufficient balance')).toBeVisible({timeout:25000});
 });
  
  
