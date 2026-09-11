@@ -1,9 +1,9 @@
 import {test, expect} from '@playwright/test';
  
-test('Enter alphabetic characters in tarnsfer amount', async ({page}) => {
-    test.setTimeout(300000);
+test('Enter alphabetic characters in transfer amount', async ({page}) => {
+    test.setTimeout(30000);
  
-    await page.goto('http://localhost/login');
+      await page.goto('http://localhost:4173/login')
     await expect(page).toHaveTitle('FlashGuard | Secure Fintech Portal');
  
  //Login
@@ -17,13 +17,13 @@ test('Enter alphabetic characters in tarnsfer amount', async ({page}) => {
     .click();
  
     await page.waitForTimeout(15000);
-    await expect(page).toHaveURL('http://localhost/dashboard');
+    await expect(page).toHaveURL('http://localhost:4173/dashboard');
     await expect(page.getByText('Portfolio Overview'))
     .toBeVisible();
  
  //Navigate to Transfer funds
     await page.getByRole('link', {name: "payments Transfer Funds"}).click();
-    await expect(page).toHaveURL('http://localhost/transfers');
+    await expect(page).toHaveURL('http://localhost:4173/transfers');
     await expect(page.getByText('Transfer Details')).toBeVisible();
     await page.getByRole('button', {name: 'One-off beneficiary Enter one-off details'})
     .click();
