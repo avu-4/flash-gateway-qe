@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-17",
+  "title": "Validate successful voucher purchase when balance is sufficient.",
+  "folder": "02 - Financial & Distribution Logic",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/vouchers/purchase",
+  "priority": "P0",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "Voucher serial, PIN, transaction ID returned; status SUCCESS.",
+  "headers": [],
+  "body": null
+}

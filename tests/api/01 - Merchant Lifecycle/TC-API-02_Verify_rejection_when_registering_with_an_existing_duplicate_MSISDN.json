@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-02",
+  "title": "Verify rejection when registering with an existing/duplicate MSISDN.",
+  "folder": "01 - Merchant Lifecycle",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/merchants/register",
+  "priority": "P0",
+  "expectedStatus": "400 Bad Request",
+  "expectedOutcome": "Error message indicating duplicate MSISDN/phone number.",
+  "headers": [],
+  "body": null
+}

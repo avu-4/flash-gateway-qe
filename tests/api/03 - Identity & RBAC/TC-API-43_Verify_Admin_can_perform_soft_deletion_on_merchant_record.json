@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-43",
+  "title": "Verify Admin can perform soft-deletion on merchant record.",
+  "folder": "03 - Identity & RBAC",
+  "method": "DELETE",
+  "url": "{{base_url}}/api/v1/admin/merchants/{id}",
+  "priority": "P1",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "Merchant record soft-deleted (is_deleted = true).",
+  "headers": [],
+  "body": null
+}

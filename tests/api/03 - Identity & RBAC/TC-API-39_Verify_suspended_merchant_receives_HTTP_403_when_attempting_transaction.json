@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-39",
+  "title": "Verify suspended merchant receives HTTP 403 when attempting transaction.",
+  "folder": "03 - Identity & RBAC",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/vouchers/purchase",
+  "priority": "P1",
+  "expectedStatus": "403 Forbidden",
+  "expectedOutcome": "Transaction rejected due to suspended account status.",
+  "headers": [],
+  "body": null
+}

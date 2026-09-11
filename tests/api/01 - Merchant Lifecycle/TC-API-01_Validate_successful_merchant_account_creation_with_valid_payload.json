@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-01",
+  "title": "Validate successful merchant account creation with valid payload.",
+  "folder": "01 - Merchant Lifecycle",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/merchants/register",
+  "priority": "P0",
+  "expectedStatus": "201 Created",
+  "expectedOutcome": "Merchant account created successfully with assigned ID and wallet.",
+  "headers": [],
+  "body": null
+}

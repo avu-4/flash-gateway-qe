@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-03",
+  "title": "Verify registration failure when mandatory fields are missing.",
+  "folder": "01 - Merchant Lifecycle",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/merchants/register",
+  "priority": "P0",
+  "expectedStatus": "400 Bad Request",
+  "expectedOutcome": "Field validation errors listing missing required attributes.",
+  "headers": [],
+  "body": null
+}

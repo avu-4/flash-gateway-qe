@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-32",
+  "title": "Verify filtering transaction logs by status (SUCCESS, FAILED).",
+  "folder": "02 - Financial & Distribution Logic",
+  "method": "GET",
+  "url": "{{base_url}}/api/v1/transactions/history",
+  "priority": "P1",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "Filtered records matching requested status only.",
+  "headers": [],
+  "body": null
+}

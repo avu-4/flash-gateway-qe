@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-34",
+  "title": "Validate listing of active digital products and fixed denominations.",
+  "folder": "02 - Financial & Distribution Logic",
+  "method": "GET",
+  "url": "{{base_url}}/api/v1/vouchers/products",
+  "priority": "P1",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "Array of available digital voucher products and pricing.",
+  "headers": [],
+  "body": null
+}

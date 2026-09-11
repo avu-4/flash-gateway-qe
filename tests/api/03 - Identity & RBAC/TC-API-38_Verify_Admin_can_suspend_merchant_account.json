@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-38",
+  "title": "Verify Admin can suspend merchant account.",
+  "folder": "03 - Identity & RBAC",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/admin/merchants/suspend",
+  "priority": "P1",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "Merchant status updated to SUSPENDED.",
+  "headers": [],
+  "body": null
+}

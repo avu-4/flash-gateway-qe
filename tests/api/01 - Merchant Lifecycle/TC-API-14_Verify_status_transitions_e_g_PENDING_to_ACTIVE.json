@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-14",
+  "title": "Verify status transitions (e.g., PENDING to ACTIVE).",
+  "folder": "01 - Merchant Lifecycle",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/merchants/status",
+  "priority": "P1",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "Merchant status updated and persisted in database.",
+  "headers": [],
+  "body": null
+}

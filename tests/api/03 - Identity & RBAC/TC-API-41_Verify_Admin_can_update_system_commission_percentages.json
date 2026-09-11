@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-41",
+  "title": "Verify Admin can update system commission percentages.",
+  "folder": "03 - Identity & RBAC",
+  "method": "PUT",
+  "url": "{{base_url}}/api/v1/admin/commission-rates",
+  "priority": "P1",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "Commission rates updated across system configurations.",
+  "headers": [],
+  "body": null
+}

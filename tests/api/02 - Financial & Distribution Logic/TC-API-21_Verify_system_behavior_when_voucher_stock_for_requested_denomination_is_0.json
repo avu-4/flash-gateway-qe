@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-21",
+  "title": "Verify system behavior when voucher stock for requested denomination is 0.",
+  "folder": "02 - Financial & Distribution Logic",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/vouchers/purchase",
+  "priority": "P0",
+  "expectedStatus": "400 Bad Request",
+  "expectedOutcome": "Transaction declined with OUT_OF_STOCK error code.",
+  "headers": [],
+  "body": null
+}

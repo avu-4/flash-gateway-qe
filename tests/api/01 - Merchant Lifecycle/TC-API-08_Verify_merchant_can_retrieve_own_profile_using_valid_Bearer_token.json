@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-08",
+  "title": "Verify merchant can retrieve own profile using valid Bearer token.",
+  "folder": "01 - Merchant Lifecycle",
+  "method": "GET",
+  "url": "{{base_url}}/api/v1/merchants/profile",
+  "priority": "P1",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "Merchant profile data matching authenticated user ID.",
+  "headers": [],
+  "body": null
+}

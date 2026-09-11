@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-09",
+  "title": "Verify HTTP 401 Unauthorized when Bearer token is missing.",
+  "folder": "01 - Merchant Lifecycle",
+  "method": "GET",
+  "url": "{{base_url}}/api/v1/merchants/profile",
+  "priority": "P1",
+  "expectedStatus": "401 Unauthorized",
+  "expectedOutcome": "Error indicating missing Authorization header.",
+  "headers": [],
+  "body": null
+}

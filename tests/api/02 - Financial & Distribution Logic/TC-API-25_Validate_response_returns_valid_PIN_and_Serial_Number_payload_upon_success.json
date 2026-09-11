@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-25",
+  "title": "Validate response returns valid PIN and Serial Number payload upon success.",
+  "folder": "02 - Financial & Distribution Logic",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/vouchers/purchase",
+  "priority": "P0",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "Non-null PIN and Serial Number returned in response body.",
+  "headers": [],
+  "body": null
+}

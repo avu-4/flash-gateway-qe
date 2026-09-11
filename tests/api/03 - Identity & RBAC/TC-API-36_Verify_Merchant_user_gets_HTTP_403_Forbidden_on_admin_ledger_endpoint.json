@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-36",
+  "title": "Verify Merchant user gets HTTP 403 Forbidden on admin ledger endpoint.",
+  "folder": "03 - Identity & RBAC",
+  "method": "GET",
+  "url": "{{base_url}}/api/v1/admin/ledger/global",
+  "priority": "P1",
+  "expectedStatus": "403 Forbidden",
+  "expectedOutcome": "Access denied error due to insufficient permissions.",
+  "headers": [],
+  "body": null
+}

@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-46",
+  "title": "Verify Non-Admin gets HTTP 403 when trying to load inventory assets.",
+  "folder": "03 - Identity & RBAC",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/admin/vouchers/inventory",
+  "priority": "P1",
+  "expectedStatus": "403 Forbidden",
+  "expectedOutcome": "Access denied for non-admin user.",
+  "headers": [],
+  "body": null
+}

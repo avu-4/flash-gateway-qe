@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-49",
+  "title": "Validate system activity audit logging accessible only to Super Admin role.",
+  "folder": "03 - Identity & RBAC",
+  "method": "GET",
+  "url": "{{base_url}}/api/v1/admin/logs",
+  "priority": "P1",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "System audit logs returned for Super Admin user.",
+  "headers": [],
+  "body": null
+}

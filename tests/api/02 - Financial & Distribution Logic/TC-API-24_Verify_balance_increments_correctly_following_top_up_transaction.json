@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-24",
+  "title": "Verify balance increments correctly following top-up transaction.",
+  "folder": "02 - Financial & Distribution Logic",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/wallet/topup",
+  "priority": "P0",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "Wallet balance increases by exact top-up amount.",
+  "headers": [],
+  "body": null
+}

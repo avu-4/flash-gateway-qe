@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-33",
+  "title": "Validate processing refund transaction credits back to wallet.",
+  "folder": "02 - Financial & Distribution Logic",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/vouchers/refund",
+  "priority": "P1",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "Refund record created and wallet balance credited.",
+  "headers": [],
+  "body": null
+}

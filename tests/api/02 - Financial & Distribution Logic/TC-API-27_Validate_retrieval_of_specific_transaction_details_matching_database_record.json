@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-27",
+  "title": "Validate retrieval of specific transaction details matching database record.",
+  "folder": "02 - Financial & Distribution Logic",
+  "method": "GET",
+  "url": "{{base_url}}/api/v1/transactions/{id}",
+  "priority": "P0",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "Single transaction record with full metadata.",
+  "headers": [],
+  "body": null
+}

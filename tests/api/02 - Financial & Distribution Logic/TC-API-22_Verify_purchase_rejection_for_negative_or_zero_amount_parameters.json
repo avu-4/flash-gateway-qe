@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-22",
+  "title": "Verify purchase rejection for negative or zero amount parameters.",
+  "folder": "02 - Financial & Distribution Logic",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/vouchers/purchase",
+  "priority": "P0",
+  "expectedStatus": "400 Bad Request",
+  "expectedOutcome": "Validation error for invalid transaction amount.",
+  "headers": [],
+  "body": null
+}
