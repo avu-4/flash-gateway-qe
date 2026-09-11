@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-40",
+  "title": "Verify Admin can reactivate suspended merchant account.",
+  "folder": "03 - Identity & RBAC",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/admin/merchants/activate",
+  "priority": "P1",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "Merchant status restored to ACTIVE.",
+  "headers": [],
+  "body": null
+}

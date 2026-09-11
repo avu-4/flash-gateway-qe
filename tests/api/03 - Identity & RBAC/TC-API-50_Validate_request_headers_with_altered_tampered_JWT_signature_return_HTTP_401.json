@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-50",
+  "title": "Validate request headers with altered/tampered JWT signature return HTTP 401.",
+  "folder": "03 - Identity & RBAC",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/vouchers/purchase",
+  "priority": "P1",
+  "expectedStatus": "401 Unauthorized",
+  "expectedOutcome": "JWT signature verification failed.",
+  "headers": [],
+  "body": null
+}

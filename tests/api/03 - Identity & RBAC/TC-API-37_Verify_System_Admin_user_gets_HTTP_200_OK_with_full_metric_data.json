@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-37",
+  "title": "Verify System Admin user gets HTTP 200 OK with full metric data.",
+  "folder": "03 - Identity & RBAC",
+  "method": "GET",
+  "url": "{{base_url}}/api/v1/admin/ledger/global",
+  "priority": "P1",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "Global ledger summary and cross-merchant total metrics.",
+  "headers": [],
+  "body": null
+}

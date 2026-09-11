@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-11",
+  "title": "Validate successful update of merchant profile details.",
+  "folder": "01 - Merchant Lifecycle",
+  "method": "PUT",
+  "url": "{{base_url}}/api/v1/merchants/profile",
+  "priority": "P1",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "Updated profile payload reflecting submitted changes.",
+  "headers": [],
+  "body": null
+}

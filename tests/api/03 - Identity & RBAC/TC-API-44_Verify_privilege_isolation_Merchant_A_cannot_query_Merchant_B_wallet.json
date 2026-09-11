@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-44",
+  "title": "Verify privilege isolation (Merchant A cannot query Merchant B wallet).",
+  "folder": "03 - Identity & RBAC",
+  "method": "GET",
+  "url": "{{base_url}}/api/v1/merchants/wallet/{other_id}",
+  "priority": "P1",
+  "expectedStatus": "403 Forbidden",
+  "expectedOutcome": "Access denied; cross-tenant data access blocked.",
+  "headers": [],
+  "body": null
+}

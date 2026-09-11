@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-47",
+  "title": "Verify Admin audit endpoint aggregates cross-merchant financial subtotals.",
+  "folder": "03 - Identity & RBAC",
+  "method": "GET",
+  "url": "{{base_url}}/api/v1/admin/reports/summary",
+  "priority": "P1",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "Aggregated financial metrics report returned.",
+  "headers": [],
+  "body": null
+}

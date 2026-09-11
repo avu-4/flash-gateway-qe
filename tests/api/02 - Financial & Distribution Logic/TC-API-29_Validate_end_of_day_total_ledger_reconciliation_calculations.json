@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-29",
+  "title": "Validate end-of-day total ledger reconciliation calculations.",
+  "folder": "02 - Financial & Distribution Logic",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/settlement/calculate",
+  "priority": "P0",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "Reconciliation totals match sum of debit/credit entries.",
+  "headers": [],
+  "body": null
+}

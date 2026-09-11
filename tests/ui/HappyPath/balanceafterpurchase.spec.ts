@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.only("Merchant's balance updates after purchase", async ({ page }) => {
+test("Merchant's balance updates after purchase", async ({ page }) => {
 
   // Open application
   await page.goto('http://localhost:4173');
@@ -28,7 +28,9 @@ test.only("Merchant's balance updates after purchase", async ({ page }) => {
   await expect (page.getByRole('heading', {name: 'R5000,00.00'})).toBeVisible()
 
   // Navigate to Airtime & Data
-  await page.getByRole('link', { name: /Buy Airtime/i }).click();
+   await page.getByRole('link', {
+        name: 'wifi_tethering Airtime & Data'
+    }).click();
 
   // Select R20
   await page.getByText('R20', { exact: true }).click();

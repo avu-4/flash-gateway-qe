@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-16",
+  "title": "Validate real-time wallet balance retrieval for authenticated merchant.",
+  "folder": "02 - Financial & Distribution Logic",
+  "method": "GET",
+  "url": "{{base_url}}/api/v1/wallet/balance",
+  "priority": "P0",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "Returns current available balance, currency, and ledger timestamp.",
+  "headers": [],
+  "body": null
+}

@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-42",
+  "title": "Verify non-admin user gets HTTP 403 on updating commission rates.",
+  "folder": "03 - Identity & RBAC",
+  "method": "PUT",
+  "url": "{{base_url}}/api/v1/admin/commission-rates",
+  "priority": "P1",
+  "expectedStatus": "403 Forbidden",
+  "expectedOutcome": "Access denied for non-admin user.",
+  "headers": [],
+  "body": null
+}

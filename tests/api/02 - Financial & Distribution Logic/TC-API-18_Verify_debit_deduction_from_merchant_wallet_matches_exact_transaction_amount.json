@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-18",
+  "title": "Verify debit deduction from merchant wallet matches exact transaction amount.",
+  "folder": "02 - Financial & Distribution Logic",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/vouchers/purchase",
+  "priority": "P0",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "Wallet balance reduced by exactly product purchase price.",
+  "headers": [],
+  "body": null
+}

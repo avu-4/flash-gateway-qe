@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-31",
+  "title": "Verify filtering transaction logs by date range (startDate, endDate).",
+  "folder": "02 - Financial & Distribution Logic",
+  "method": "GET",
+  "url": "{{base_url}}/api/v1/transactions/history",
+  "priority": "P1",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "Filtered records strictly within requested date range.",
+  "headers": [],
+  "body": null
+}

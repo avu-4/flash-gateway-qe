@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-23",
+  "title": "Validate successful merchant wallet top-up by admin/system.",
+  "folder": "02 - Financial & Distribution Logic",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/wallet/topup",
+  "priority": "P0",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "Wallet credited; top-up reference ID returned.",
+  "headers": [],
+  "body": null
+}

@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-30",
+  "title": "Verify transactional rollbacks (atomicity) if voucher generation fails midway.",
+  "folder": "02 - Financial & Distribution Logic",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/vouchers/purchase",
+  "priority": "P0",
+  "expectedStatus": "500 Internal Error",
+  "expectedOutcome": "Wallet debit rolled back; initial balance restored.",
+  "headers": [],
+  "body": null
+}

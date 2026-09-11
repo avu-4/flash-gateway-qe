@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-45",
+  "title": "Verify Admin can load new digital voucher assets into system database.",
+  "folder": "03 - Identity & RBAC",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/admin/vouchers/inventory",
+  "priority": "P1",
+  "expectedStatus": "201 Created",
+  "expectedOutcome": "Voucher inventory batch ingested successfully.",
+  "headers": [],
+  "body": null
+}

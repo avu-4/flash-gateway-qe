@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-13",
+  "title": "Validate successful generation of new JWT using valid refresh token.",
+  "folder": "01 - Merchant Lifecycle",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/auth/refresh-token",
+  "priority": "P1",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "New access token generated successfully.",
+  "headers": [],
+  "body": null
+}

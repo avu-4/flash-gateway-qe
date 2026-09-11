@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-20",
+  "title": "Verify HTTP 402/400 error when merchant wallet balance is insufficient.",
+  "folder": "02 - Financial & Distribution Logic",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/vouchers/purchase",
+  "priority": "P0",
+  "expectedStatus": "402 Payment Required",
+  "expectedOutcome": "Transaction declined with INSUFFICIENT_FUNDS code.",
+  "headers": [],
+  "body": null
+}

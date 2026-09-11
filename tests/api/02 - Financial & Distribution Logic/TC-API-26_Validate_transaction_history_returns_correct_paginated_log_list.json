@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-26",
+  "title": "Validate transaction history returns correct paginated log list.",
+  "folder": "02 - Financial & Distribution Logic",
+  "method": "GET",
+  "url": "{{base_url}}/api/v1/transactions/history",
+  "priority": "P0",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "Paginated array of historical transaction records.",
+  "headers": [],
+  "body": null
+}

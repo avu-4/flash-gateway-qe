@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-15",
+  "title": "Verify SQL/XSS payload injection attempts in input fields are sanitized.",
+  "folder": "01 - Merchant Lifecycle",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/merchants/register",
+  "priority": "P1",
+  "expectedStatus": "400 Bad Request",
+  "expectedOutcome": "Input sanitized or rejected; no script/SQL code executed.",
+  "headers": [],
+  "body": null
+}

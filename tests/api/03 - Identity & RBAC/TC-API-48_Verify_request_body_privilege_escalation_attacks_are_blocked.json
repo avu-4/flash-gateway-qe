@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-48",
+  "title": "Verify request body privilege escalation attacks are blocked.",
+  "folder": "03 - Identity & RBAC",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/auth/role-escalation",
+  "priority": "P1",
+  "expectedStatus": "400 Bad Request",
+  "expectedOutcome": "Role mutation via API request body ignored or rejected.",
+  "headers": [],
+  "body": null
+}

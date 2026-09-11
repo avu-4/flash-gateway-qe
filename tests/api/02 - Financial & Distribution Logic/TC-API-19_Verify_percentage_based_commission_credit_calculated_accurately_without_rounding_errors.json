@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-19",
+  "title": "Verify percentage-based commission credit calculated accurately without rounding errors.",
+  "folder": "02 - Financial & Distribution Logic",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/vouchers/purchase",
+  "priority": "P0",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "Commission credit ledger entry matches configured percentage accurately.",
+  "headers": [],
+  "body": null
+}

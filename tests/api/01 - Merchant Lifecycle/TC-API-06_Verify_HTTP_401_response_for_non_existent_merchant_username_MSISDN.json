@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-06",
+  "title": "Verify HTTP 401 response for non-existent merchant username/MSISDN.",
+  "folder": "01 - Merchant Lifecycle",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/auth/login",
+  "priority": "P0",
+  "expectedStatus": "401 Unauthorized",
+  "expectedOutcome": "Authentication error message; no token issued.",
+  "headers": [],
+  "body": null
+}

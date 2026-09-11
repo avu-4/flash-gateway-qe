@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-35",
+  "title": "Verify system execution response time is under 2000ms threshold.",
+  "folder": "02 - Financial & Distribution Logic",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/vouchers/purchase",
+  "priority": "P1",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "Response time measured < 2000ms.",
+  "headers": [],
+  "body": null
+}

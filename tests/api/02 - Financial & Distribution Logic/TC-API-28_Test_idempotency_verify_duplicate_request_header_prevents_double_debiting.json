@@ -1,0 +1,12 @@
+{
+  "testCaseId": "TC-API-28",
+  "title": "Test idempotency: verify duplicate request header prevents double-debiting.",
+  "folder": "02 - Financial & Distribution Logic",
+  "method": "POST",
+  "url": "{{base_url}}/api/v1/vouchers/purchase",
+  "priority": "P0",
+  "expectedStatus": "200 OK",
+  "expectedOutcome": "Original result returned; wallet debited only once.",
+  "headers": [],
+  "body": null
+}
